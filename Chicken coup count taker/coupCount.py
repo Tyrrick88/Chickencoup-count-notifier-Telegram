@@ -1,12 +1,22 @@
-def main():
-    #First The capacity of the coup is determined
-    coupCount = int(input("Chicken coup count: "))
+import time
+from telegram import Bot
+from telegram.error import TelegramError
 
-    if coupCount < 50:
-        print("Chicken/Chicks are too few")
+# Here add your Telegram bot token
+bot = Bot(token='YOUR_TELEGRAM_BOT_TOKEN')
 
-    elif coupCount == 50:
-        print("All the Chicken/Chicks are in the coups")
 
-if __name__ == "__main__":
-    main()
+CHICKEN_COUP_COUNT = 50
+
+# Here input your telegram user id
+FARMER_TELEGRAM_USER_ID = (int(Input("Your telegram   user id: ").strip()),)
+
+def send_chicken_count_to_farmer():
+    try:
+        bot.send_message(chat_id=FARMER_TELEGRAM_USER_ID, text=f'Chicken coup count: {CHICKEN_COUP_COUNT}')
+    except TelegramError as e:
+        print(f'Error sending message to Telegram: {e}')
+
+while True:
+    time.sleep(3600 * 7) # wait for 7 hours
+    send_chicken_count_to_farmer()
