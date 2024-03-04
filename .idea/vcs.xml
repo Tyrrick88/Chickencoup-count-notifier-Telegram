@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Chickencoup-count" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Chickencoup-count-1" vcs="Git" />
   </component>
 </project>
