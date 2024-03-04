@@ -9,7 +9,7 @@ bot = Bot(token='YOUR_TELEGRAM_BOT_TOKEN')
 CHICKEN_COUP_COUNT = 50
 
 # Here input your telegram user id
-FARMER_TELEGRAM_USER_ID = (int(Input("Your telegram   user id: ").strip()),)
+FARMER_TELEGRAM_USER_ID = (int(input("Your telegram user id: ").strip()),)
 
 def send_chicken_count_to_farmer():
     try:
